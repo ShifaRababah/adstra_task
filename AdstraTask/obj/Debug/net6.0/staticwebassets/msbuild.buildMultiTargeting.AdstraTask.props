@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\AdstraTask.props" />
+</Project>

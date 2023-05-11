@@ -1,0 +1,371 @@
+
+
+
+
+
+
+:root {
+    --primary: #55C5BE;
+    --primary-rgb: 85, 197, 190;
+    --secondary: #9971b5fc;
+    --background: #F5F5F5;
+    --boreders: #DCDCDC;
+    --text: #000000;
+    --z-tooltip: 10;
+    --z-fixed: 100;
+    /*= == Font and typography =*/
+    --body-font: 'Monda';
+    --biggest-font-size: 2rem;
+    --bigger-font-size: 1.25rem;
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1rem;
+    --normal-font-size: .938rem;
+    --small-font-size: .813rem;
+    --smaller-font-size: .75rem;
+    /*= Font weight =* */
+    --font-regular: 400;
+    --font-medium: 500;
+    --font-semi-bold: 700;
+    /*=logo size=*/
+    --logo-height: 100px;
+    --contact-img: 300px
+}
+
+/*Responsive typography*/
+@media screen and (min-width: 900px) {
+    :root {
+        --biggest-font-size: 4rem;
+        --bigger-font-size: 1.75rem;
+        --h1-font-size: 2.25rem;
+        --h2-font-size: 1.5rem;
+        --h3-font-size: 1.25rem;
+        --normal-font-size: 1.25rem;
+        --small-font-size: .875rem;
+        --smaller-font-size: .813rem;
+        --logo-height: 60px;
+        --contact-img: 500px;
+    }
+}
+
+
+h1 {
+    padding: 1rem;
+}
+
+p {
+    padding: 1rem;
+}
+
+button {
+    padding: 1rem;
+}
+
+
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+input,
+textarea,
+button,
+body {
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-regular);
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+section {
+    height: 100vh;
+    padding-top: 5rem;
+}
+
+form {
+    display: block;
+    width:600px;
+}
+
+main {
+    overflow: hidden;
+}
+
+body {
+    background-color: var(--background);
+    color: var(--text);
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    z-index: var(--z-fixed);
+}
+
+.logo {
+    height: var(--logo-height);
+    padding-top: 1rem;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: var(--background);
+    padding-top: 2rem;
+}
+
+.nav-list {
+    display: flex;
+    column-gap: 0.2rem;
+    border: 1px solid var(--boreders);
+    border-radius: 5px;
+    flex-wrap: wrap;
+}
+
+.nav-link {
+    color: var(--text);
+}
+
+.nav-item {
+    padding: 15px 25px;
+}
+
+    .nav-item:hover {
+        background-color: var(--secondary);
+    }
+
+#contact {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap-reverse;
+}
+
+.contact-form {
+    display: block;
+    margin: 0 0 1rem 1rem;
+    padding: 0.5rem;
+}
+
+#img-contact {
+    width: var(--contact-img);
+}
+
+.img-home {
+    width: var(--contact-img);
+}
+
+#email, #text-problem {
+    background-color: #EFEFEF;
+    border: 3px solid var(--boreders);
+    border-radius: 10px;
+    width: 100%;
+}
+
+    #email, #text-problem:focus {
+        outline-color: var(--primary);
+    }
+
+.submit-btn {
+    border-radius: 10px;
+    background-color: var(--secondary);
+ 
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-semi-bold);
+    border: none;
+    width:200px;
+}
+
+    .submit-btn:hover {
+        box-shadow: 0 0 0 4px rgba(var(--primary-rgb),0.4);
+        cursor: pointer;
+    }
+
+#arrow {
+    margin-left: 4rem;
+}
+
+input,
+textarea::placeholder {
+    font-size: var(--normal-font-size);
+}
+
+#home {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+/*
+#project {
+    display: flex;
+    flex-direction: column;
+    row-gap: 4rem;
+}
+*/
+
+.h1-project {
+    padding-bottom: 1rem;
+}
+
+.p1-project {
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-semi-bold);
+    color: var(--primary);
+}
+
+.description {
+    width: 50vw;
+    background: url(.png), radial-gradient(90.16% 143.01% at 15.32% 21.04%, rgba(59, 120, 147, 0.2) 0%, rgba(110, 191, 244, 0.0447917) 77.08%, rgba(70, 144, 213, 0.05) 100%);
+    background-blend-mode: overlay, normal;
+    backdrop-filter: blur(40px);
+    border-radius: 14px;
+    line-height: 2rem;
+    align-items: center;
+    font-size: var(--normal-font-size);
+    padding: 1rem;
+    z-index: 3;
+    opacity: 0.9;
+}
+
+/*.project-pic {
+    width: 300px;
+    z-index: 1;
+}*/
+
+/*.project1 {
+    display: flex;
+    flex-wrap: wrap-reverse;
+}
+
+.project2 {
+    display: flex;
+    flex-wrap: wrap;
+}*/
+
+.main-describe-container {
+    flex: 1.6;
+    height: 100%;
+    position: relative;
+}
+
+.main-describe-right {
+    position: absolute;
+    left: -50px;
+    top: -20px
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.img-container-left {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.main-describe-left {
+    position: absolute;
+    right: -50px;
+    top: -20px
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.img-container-right {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+}
+
+
+
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: black;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* Add padding to containers */
+.container {
+    padding: 16px;
+    background-color: white;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+}
+
+    input[type=text]:focus, input[type=password]:focus {
+        background-color: #ddd;
+        outline: none;
+    }
+
+/* Overwrite default styles of hr */
+hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+}
+
+/* Set a style for the submit button */
+.registerbtn {
+    background-color: var(--secondary);
+    color: white;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+}
+
+    .registerbtn:hover {
+        opacity: 1;
+    }
+
+/* Add a blue text color to links */
+a {
+    color: var(--secondary);
+}
+
+/* Set a grey background color and center the text of the "sign in" section */
+.signin {
+    background-color: #f1f1f1;
+    text-align: center;
+}
+
+span.field-validation-error {
+    color: #b94a48;
+    font-size: .8rem;
+}
