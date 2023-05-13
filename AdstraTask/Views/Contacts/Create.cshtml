@@ -1,0 +1,50 @@
+﻿@model AdstraTask.Models.Contact
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+
+
+<hr />
+<section id="contact">
+
+        <form class="contact-items" asp-action="Create">   
+            <h1 class="contact-form">Contact us :</h1>
+    <input asp-for="Email" type="email" name="email" id="email" placeholder="Your email" class="contact-form">
+                <span asp-validation-for="Email" class="text-danger"></span>
+             <textarea asp-for="Message" id="text-problem"  rows="4" cols="24" placeholder="Write your message : " class="contact-form"></textarea>
+                <span asp-validation-for="Message" class="text-danger"></span>
+                <input type="submit" value="Send message" class="submit-btn contact-form" />     
+        </form>
+        <div class="contact-items">
+            <img src="~/images/hero_maps_static_api.png" />
+        </div>
+
+</section>
+
+@*
+        <section id="contact">
+            <form class="contact-items ">
+                <h1 class="contact-form">Contact us :</h1>
+                <input type="email" name="email" id="email" placeholder="Your email" class="contact-form">
+                <textarea id="text-problem" name="text-problem" rows="4" cols="24" placeholder="Write your message : " class="contact-form"></textarea>
+                <button type="submit" class="submit-btn contact-form">
+                    Send
+
+                </button>
+            </form>
+            <div class="contact-items">
+                <img src="~/images/hero_maps_static_api.png" />
+            </div>
+        </section>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}*@

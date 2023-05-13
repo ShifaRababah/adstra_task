@@ -4,6 +4,7 @@ using AdstraTask.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AdstraTask.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230513015017_addRole")]
+    partial class addRole
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -74,15 +76,15 @@ namespace AdstraTask.Data.Migrations
                         {
                             Id = "fab4fac1-c546-41de-aebc-a14da6895711",
                             ConcurrencyStamp = "1",
-                            Name = "Admin",
+                            Name = "sales",
                             NormalizedName = "Admin"
                         },
                         new
                         {
                             Id = "c7b013f0-5201-4317-abd8-c211f91b7330",
                             ConcurrencyStamp = "2",
-                            Name = "User",
-                            NormalizedName = "User"
+                            Name = "HR",
+                            NormalizedName = "Human Resource"
                         });
                 });
 
@@ -178,37 +180,17 @@ namespace AdstraTask.Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "0596f773-4be2-4bdc-a8c0-ddf10dc2a320",
+                            Id = "b74ddd14-6340-4840-95c2-db12554843e5",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "8112b13a-dd15-4fc0-b2d9-41ac2c859912",
-                            Email = "Admin@gmail.com",
+                            ConcurrencyStamp = "3654c10d-78f9-4442-8a7d-42a68256ff1e",
+                            Email = "admin@gmail.com",
                             EmailConfirmed = false,
                             LockoutEnabled = false,
-                            NormalizedEmail = "Admin@gmail.com",
-                            NormalizedUserName = "Admin",
-                            PasswordHash = "Admin*123",
-                            PhoneNumber = "12343545",
+                            PhoneNumber = "1234567890",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "225a1cff-68b9-4964-97f8-6b6a610c6687",
+                            SecurityStamp = "428ffb69-01e3-4449-8411-201f694134e1",
                             TwoFactorEnabled = false,
                             UserName = "Admin"
-                        },
-                        new
-                        {
-                            Id = "17c53995-0047-471b-bf0b-ca1bd7fd0306",
-                            AccessFailedCount = 0,
-                            ConcurrencyStamp = "71878471-0777-4bfe-9dd8-3afb418a577d",
-                            Email = "User@gmail.com",
-                            EmailConfirmed = false,
-                            LockoutEnabled = false,
-                            NormalizedEmail = "User@gmail.com",
-                            NormalizedUserName = "User",
-                            PasswordHash = "User*123",
-                            PhoneNumber = "43836287389",
-                            PhoneNumberConfirmed = false,
-                            SecurityStamp = "7090877b-3db7-4f9e-b9d8-7c95c87e890d",
-                            TwoFactorEnabled = false,
-                            UserName = "User"
                         });
                 });
 

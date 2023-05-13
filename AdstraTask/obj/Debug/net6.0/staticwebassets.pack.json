@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\AdstraTask.bundle.scp.css"
     },
     {
+      "Id": "C:\\Projects\\AdstraTask\\AdstraTask\\wwwroot\\css\\admin.css",
+      "PackagePath": "staticwebassets\\css\\admin.css"
+    },
+    {
       "Id": "C:\\Projects\\AdstraTask\\AdstraTask\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
@@ -31,6 +35,10 @@
     {
       "Id": "C:\\Projects\\AdstraTask\\AdstraTask\\wwwroot\\images\\shutterstock_1348992512-content.jpg",
       "PackagePath": "staticwebassets\\images\\shutterstock_1348992512-content.jpg"
+    },
+    {
+      "Id": "C:\\Projects\\AdstraTask\\AdstraTask\\wwwroot\\js\\admin.js",
+      "PackagePath": "staticwebassets\\js\\admin.js"
     },
     {
       "Id": "C:\\Projects\\AdstraTask\\AdstraTask\\wwwroot\\js\\site.js",
