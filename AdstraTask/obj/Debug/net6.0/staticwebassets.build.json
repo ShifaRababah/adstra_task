@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "AQ+73fYRWF1kXsqVaTTZt7p/FcQM030/t/MGmr5p5oc=",
+  "Hash": "/xwzEnLgmftZmvRHwIT5ywE3/sxKrpUqNsDlbXEV+7c=",
   "Source": "AdstraTask",
   "BasePath": "_content/AdstraTask",
   "Mode": "Default",
@@ -51,12 +51,12 @@
       "OriginalItemSpec": "C:\\Projects\\AdstraTask\\AdstraTask\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\AdstraTask.bundle.scp.css"
     },
     {
-      "Identity": "C:\\Projects\\AdstraTask\\AdstraTask\\wwwroot\\css\\admin.css",
+      "Identity": "C:\\Projects\\AdstraTask\\AdstraTask\\wwwroot\\css\\Admin.css",
       "SourceId": "AdstraTask",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Projects\\AdstraTask\\AdstraTask\\wwwroot\\",
       "BasePath": "_content/AdstraTask",
-      "RelativePath": "css/admin.css",
+      "RelativePath": "css/Admin.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -65,7 +65,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\css\\admin.css"
+      "OriginalItemSpec": "wwwroot\\css\\Admin.css"
     },
     {
       "Identity": "C:\\Projects\\AdstraTask\\AdstraTask\\wwwroot\\css\\site.css",
@@ -187,12 +187,12 @@
       "OriginalItemSpec": "wwwroot\\images\\shutterstock_1348992512-content.jpg"
     },
     {
-      "Identity": "C:\\Projects\\AdstraTask\\AdstraTask\\wwwroot\\js\\admin.js",
+      "Identity": "C:\\Projects\\AdstraTask\\AdstraTask\\wwwroot\\js\\Admin.js",
       "SourceId": "AdstraTask",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Projects\\AdstraTask\\AdstraTask\\wwwroot\\",
       "BasePath": "_content/AdstraTask",
-      "RelativePath": "js/admin.js",
+      "RelativePath": "js/Admin.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -201,7 +201,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\js\\admin.js"
+      "OriginalItemSpec": "wwwroot\\js\\Admin.js"
     },
     {
       "Identity": "C:\\Projects\\AdstraTask\\AdstraTask\\wwwroot\\js\\site.js",

@@ -209,6 +209,13 @@ textarea::placeholder {
     align-items: center;
     justify-content: space-evenly;
 }
+/*
+#project {
+    display: flex;
+    flex-direction: column;
+    row-gap: 4rem;
+}
+*/
 
 .h1-project {
     padding-bottom: 1rem;
@@ -234,6 +241,20 @@ textarea::placeholder {
     opacity: 0.9;
 }
 
+/*.project-pic {
+    width: 300px;
+    z-index: 1;
+}*/
+
+/*.project1 {
+    display: flex;
+    flex-wrap: wrap-reverse;
+}
+
+.project2 {
+    display: flex;
+    flex-wrap: wrap;
+}*/
 
 .main-describe-container {
     flex: 1.6;
@@ -283,7 +304,7 @@ textarea::placeholder {
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: black;
+    background-color: var(--background);
 }
 
 * {
@@ -348,34 +369,3 @@ span.field-validation-error {
     color: #b94a48;
     font-size: .8rem;
 }
-
-
-
-
-
-/*Table design */
-
-body {
-    background-color: lightgray;
-}
-
-table {
-    width: 100%;
-}
-
-td form {
-    margin: 0;
-    padding: 0;
-}
-
-    td form button.button {
-        padding: 0.25em;
-        margin: 0.25em;
-        background: none;
-        color: blue;
-    }
-
-        td form button.button:hover {
-            background: none;
-            color: steelblue;
-        }

@@ -1,5 +1,4 @@
-﻿
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
@@ -33,8 +32,15 @@
                 <span class="tooltip">Dashboard</span>
             </li>
             <li>
-                <a href="/Admin/ShowUsersInfo">
+                <a href="/Identity/Account/Manage">
                     <i class='bx bx-user'></i>
+                    <span class="links_name">My Account</span>
+                </a>
+                <span class="tooltip">My Account</span>
+            </li>
+            <li>
+                <a href="/Admin/ShowUsersInfo">
+                    <i class='bx bx-folder'></i>
                     <span class="links_name">Users</span>
                 </a>
                 <span class="tooltip">Users</span>
@@ -46,7 +52,7 @@
                 </a>
                 <span class="tooltip">Messages</span>
             </li>
-            <li>
+           @* <li>
                 <a href="#">
                     <i class='bx bx-pie-chart-alt-2'></i>
                     <span class="links_name">Analytics</span>
@@ -73,19 +79,27 @@
                     <span class="links_name">Saved</span>
                 </a>
                 <span class="tooltip">Saved</span>
-            </li>
+            </li>*@
+
+        
             <li>
-                <a href="#">
-                    <i class='bx bx-cog'></i>
-                    <span class="links_name">Setting</span>
+                <a>
+                    <i class='bx bx-log-out' id="log_out"></i>
+                    <form class="nav-item" action="/Identity/Account/Logout?returnUrl=%2F" method="post">
+                        <button type="submit" class="submit-btn contact-form"><i class='bx bx-log-out' id="log_out"></i></button>
+                        <input name="__RequestVerificationToken" type="hidden" value="CfDJ8C8QQRXEejJEgg5oe04mcWOnRpKnKmf_oaSkdoYK6srbEDcjl1HPjC-SncmbM-sNtu27HZD2VyM7SDlEqz7GR91nhOfKGKNLFVEy-9oA_25ZQTF5o87YsCHJAVFUrE_W_RygMKGzU6YTz1j9JWYK_ojgx3T4O6F5J3N4e7sWL9Cf5Pk6j7epTcAcH5T2kfRxsA">
+                    </form>
+                    <span class="links_name">Logout</span>
                 </a>
-                <span class="tooltip">Setting</span>
+                <span class="tooltip">Logout</span>
             </li>
-        </ul>
-        <div class="content">
+        </ul> 
+
+    
+   @*     <div class="content">
             <div class="user">
                 <div class="user_details">
-                   
+
                     <div class="name_job">
                         <div class="name">Bhaskar Gupta</div>
                         <div class="job">Web Designer</div>
@@ -93,17 +107,17 @@
                 </div>
                 <i class='bx bx-log-out' id="log_out"></i>
             </div>
-        </div>
+        </div>*@
     </div>
-    <main role="main" class="pb-3">
-        @RenderBody()
-    </main>
- 
 
-   
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
 
-    <script src="/js/admin.js"></script>
+
+    <script src="~/js/Admin.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
-

@@ -314,7 +314,7 @@ table {
 	font-family: arial, sans-serif;
 	border-collapse: collapse;
 	width: 70%;
-	padding:15rem;
+	padding: 15rem;
 }
 
 td, th {
@@ -329,15 +329,14 @@ tr:nth-child(even) {
 
 .container {
 	width: 100%;
-	 max-width: 640px;
-	 max-width: 768px;
-     max-width: 1024px;
-	 max-width: 1280px;
-     max-width: 1536px;
+	max-width: 640px;
+	max-width: 768px;
+	max-width: 1024px;
+	max-width: 1280px;
+	max-width: 1536px;
 }
 
 main {
 	padding-top: 5rem;
 	padding-left: 20rem;
-	
 }
