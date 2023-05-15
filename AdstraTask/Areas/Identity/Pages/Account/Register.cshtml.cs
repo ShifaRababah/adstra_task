@@ -75,18 +75,21 @@ namespace AdstraTask.Areas.Identity.Pages.Account
             ///     directly from your code. This API may change or be removed in future releases.
             /// </summary>
             /// 
-            [Required]
-            [Display(Name = "UserName")]
+            [Required]        
+            [Display(Name = "User Name")]
             public string UserName { get; set; }
 
-            [Required]
-            [Display(Name = "PhoneNumber")]
-            public string PhoneNumber { get; set; }
 
             [Required]
             [EmailAddress]
             [Display(Name = "Email")]
             public string Email { get; set; }
+
+
+
+            [Required]
+            [Display(Name = "Phone Number")]
+            public string PhoneNumber { get; set; }
 
             /// <summary>
             ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
@@ -132,10 +135,10 @@ namespace AdstraTask.Areas.Identity.Pages.Account
                     _logger.LogInformation("User created a new account with password.");
 
                     var userId = await _userManager.GetUserIdAsync(user);
+                  await _userManager.SetPhoneNumberAsync(user, Input.PhoneNumber);
+
+
                     var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
-
-                    _userManager.SetPhoneNumberAsync(user, Input.PhoneNumber);
-
                     code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));
                     var callbackUrl = Url.Page(
                         "/Account/ConfirmEmail",

@@ -12,6 +12,7 @@ namespace AdstraTask.Data
         {
         }
 
+
         protected override void OnModelCreating(ModelBuilder builder)
         {
 
@@ -23,7 +24,7 @@ namespace AdstraTask.Data
 
         private void SeedUsers(ModelBuilder builder)
         {
-           // IdentityUser user = new IdentityUser();
+            // IdentityUser user = new IdentityUser();
             //{
             //    //Id = "b74ddd14-6340-4840-95c2-db12554843e5",
             //    UserName = "Admin",
@@ -53,7 +54,7 @@ namespace AdstraTask.Data
                 NormalizedEmail = "User@gmail.com",
                 NormalizedUserName = "User"
             });
-        
+
         }
 
         private void SeedRoles(ModelBuilder builder)
@@ -66,7 +67,7 @@ namespace AdstraTask.Data
 
 
 
-        public DbSet<Contact> Contacts { get; set; }    
+        public DbSet<Contact> Contacts { get; set; }
 
 
     }

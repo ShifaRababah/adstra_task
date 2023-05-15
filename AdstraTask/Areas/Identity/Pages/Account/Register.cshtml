@@ -16,18 +16,18 @@
             <p>Please fill in this form to create an account.</p>
             <hr>
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-
-            <label asp-for="Input.UserName"><b>User Name</b></label>
-            <input asp-for="Input.UserName" type="text" placeholder="Enter User Name" aria-required="true">
+            <label asp-for="Input.UserName"><b>Name</b></label>
+            <input asp-for="Input.UserName" type="text" placeholder="Enter your name" aria-required="true">
             <span asp-validation-for="Input.UserName" class="field-validation-error"></span>
             <br />
 
             <label asp-for="Input.Email"><b>Email</b></label>
-            <input asp-for="Input.Email" type="text" placeholder="Enter Email" aria-required="true">
+            <input asp-for="Input.Email" type="text" placeholder="Enter your Email" aria-required="true">
             <span asp-validation-for="Input.Email" class="field-validation-error"></span>
             <br />
-            <label asp-for="Input.PhoneNumber"><b>Phone Number</b></label>
-            <input asp-for="Input.PhoneNumber" type="text" placeholder="Enter Phone Number" aria-required="true">
+
+            <label asp-for="Input.PhoneNumber"><b>Phone number</b></label>
+            <input asp-for="Input.PhoneNumber" type="text" placeholder="Enter your phone number" aria-required="true">
             <span asp-validation-for="Input.PhoneNumber" class="field-validation-error"></span>
             <br />
    
