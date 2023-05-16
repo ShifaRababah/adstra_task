@@ -1,4 +1,4 @@
-﻿@model IEnumerable<AdstraTask.Models.Contact>
+﻿@model IEnumerable<AdstraTask.Models.ContactDto>
 
 @{
     ViewData["Title"] = "Index";
@@ -34,8 +34,8 @@
                 @Html.DisplayFor(modelItem => item.Message)
             </td>
             <td>
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                    <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-primary btn-round-2">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger btn-round-2">Delete</a>
             </td>
         </tr>
 }

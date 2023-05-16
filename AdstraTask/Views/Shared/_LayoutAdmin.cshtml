@@ -52,62 +52,19 @@
                 </a>
                 <span class="tooltip">Messages</span>
             </li>
-           @* <li>
-                <a href="#">
-                    <i class='bx bx-pie-chart-alt-2'></i>
-                    <span class="links_name">Analytics</span>
-                </a>
-                <span class="tooltip">Analytics</span>
-            </li>
-            <li>
-                <a href="#">
-                    <i class='bx bx-folder'></i>
-                    <span class="links_name">File Manager</span>
-                </a>
-                <span class="tooltip">File Manager</span>
-            </li>
-            <li>
-                <a href="#">
-                    <i class='bx bx-cart-alt'></i>
-                    <span class="links_name">Order</span>
-                </a>
-                <span class="tooltip">Order</span>
-            </li>
-            <li>
-                <a href="#">
-                    <i class='bx bx-heart'></i>
-                    <span class="links_name">Saved</span>
-                </a>
-                <span class="tooltip">Saved</span>
-            </li>*@
-
-        
+          
             <li>
                 <a>
                     <i class='bx bx-log-out' id="log_out"></i>
-                    <form class="nav-item" action="/Identity/Account/Logout?returnUrl=%2F" method="post">
-                        <button type="submit" class="submit-btn contact-form"><i class='bx bx-log-out' id="log_out"></i></button>
-                        <input name="__RequestVerificationToken" type="hidden" value="CfDJ8C8QQRXEejJEgg5oe04mcWOnRpKnKmf_oaSkdoYK6srbEDcjl1HPjC-SncmbM-sNtu27HZD2VyM7SDlEqz7GR91nhOfKGKNLFVEy-9oA_25ZQTF5o87YsCHJAVFUrE_W_RygMKGzU6YTz1j9JWYK_ojgx3T4O6F5J3N4e7sWL9Cf5Pk6j7epTcAcH5T2kfRxsA">
+                    <form class="nav-item" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Page("/", new { area = "" })" method="post">
+                        <button type="submit" class=""><i class='bx bx-log-out' id="log_out"></i></button>
                     </form>
                     <span class="links_name">Logout</span>
                 </a>
                 <span class="tooltip">Logout</span>
             </li>
-        </ul> 
 
-    
-   @*     <div class="content">
-            <div class="user">
-                <div class="user_details">
-
-                    <div class="name_job">
-                        <div class="name">Bhaskar Gupta</div>
-                        <div class="job">Web Designer</div>
-                    </div>
-                </div>
-                <i class='bx bx-log-out' id="log_out"></i>
-            </div>
-        </div>*@
+        </ul>
     </div>
 
     <div class="container">

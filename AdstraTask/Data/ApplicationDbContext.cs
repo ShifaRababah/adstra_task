@@ -24,17 +24,6 @@ namespace AdstraTask.Data
 
         private void SeedUsers(ModelBuilder builder)
         {
-            // IdentityUser user = new IdentityUser();
-            //{
-            //    //Id = "b74ddd14-6340-4840-95c2-db12554843e5",
-            //    UserName = "Admin",
-            //    Email = "admin@gmail.com",            
-            //    LockoutEnabled = false,
-            //    PhoneNumber = "1234567890"
-            //};
-
-            //PasswordHasher<IdentityUser> passwordHasher = new PasswordHasher<IdentityUser>();
-            //passwordHasher.HashPassword(user, "Admin*123");
 
             builder.Entity<IdentityUser>().HasData(new IdentityUser()
             {

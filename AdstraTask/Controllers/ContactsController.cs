@@ -7,6 +7,9 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using AdstraTask.Data;
 using AdstraTask.Models;
+using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
+using System.Data;
 
 namespace AdstraTask.Controllers
 {
@@ -20,14 +23,25 @@ namespace AdstraTask.Controllers
         }
 
         // GET: Contacts
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Index()
         {
-              return _context.Contacts != null ? 
-                          View(await _context.Contacts.ToListAsync()) :
-                          Problem("Entity set 'ApplicationDbContext.Contacts'  is null.");
+
+            // Using Auto Mapping :
+
+            List<Contact> contactsList = _context.Contacts.ToList();
+            List<ContactDto> contactsDto = new List<ContactDto>();
+
+            foreach (var item in contactsList)
+            {
+
+                contactsDto.Add(Mapping.Mapper.Map<ContactDto>(item));
+            }
+            return View(contactsDto);
         }
 
         // GET: Contacts/Details/5
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null || _context.Contacts == null)
@@ -65,21 +79,17 @@ namespace AdstraTask.Controllers
                 return RedirectToAction(nameof(Create));
             }
             return View(contact);
+
+
         }
 
         // GET: Contacts/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
-            if (id == null || _context.Contacts == null)
-            {
-                return NotFound();
-            }
+            // Using Auto Mapping :
 
-            var contact = await _context.Contacts.FindAsync(id);
-            if (contact == null)
-            {
-                return NotFound();
-            }
+            var contactDetails = _context.Contacts.FirstOrDefault(contactId => contactId.Id == id);
+            var contact = Mapping.Mapper.Map<Contact, ContactDto>(contactDetails);
             return View(contact);
         }
 
@@ -119,20 +129,14 @@ namespace AdstraTask.Controllers
         }
 
         // GET: Contacts/Delete/5
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Delete(int? id)
         {
-            if (id == null || _context.Contacts == null)
-            {
-                return NotFound();
-            }
 
-            var contact = await _context.Contacts
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (contact == null)
-            {
-                return NotFound();
-            }
+            // Using Auto Mapping :
 
+            var contactDetails = _context.Contacts.FirstOrDefault(contactId => contactId.Id == id);
+            var contact = Mapping.Mapper.Map<Contact, ContactDto>(contactDetails);
             return View(contact);
         }
 
@@ -150,14 +154,14 @@ namespace AdstraTask.Controllers
             {
                 _context.Contacts.Remove(contact);
             }
-            
+
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
         private bool ContactExists(int id)
         {
-          return (_context.Contacts?.Any(e => e.Id == id)).GetValueOrDefault();
+            return (_context.Contacts?.Any(e => e.Id == id)).GetValueOrDefault();
         }
     }
 }

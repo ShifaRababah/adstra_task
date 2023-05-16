@@ -20,15 +20,13 @@ namespace AdstraTask.Controllers
             _userManager = userManager;
         }
 
-       
-
-   
+        [Authorize (Roles ="Admin")]
         public ActionResult Index()
         {
             return View();
         }
 
- 
+        [Authorize(Roles = "Admin")]
         public IActionResult ShowUsersInfo()
         {
             var users = _userManager.Users.ToList();   

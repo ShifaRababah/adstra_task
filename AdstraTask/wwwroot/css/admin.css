@@ -15,6 +15,7 @@
 	--white-color: #fff;
 	--sky-color: #E4E9F7;
 	--light-black: #1d1b31;
+	--background: #ffffff;
 }
 
 body {
@@ -334,9 +335,162 @@ tr:nth-child(even) {
 	max-width: 1024px;
 	max-width: 1280px;
 	max-width: 1536px;
+	padding: 90px;
+	background-color: white;
 }
 
 main {
 	padding-top: 5rem;
 	padding-left: 20rem;
 }
+
+
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	background-color: white;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+/* Add padding to containers */
+.container {
+	padding:10px;
+	background-color: var(--background);
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+	width: 100%;
+	padding: 15px;
+	margin: 5px 0 22px 0;
+	display: inline-block;
+	border: none;
+	background: #f1f1f1;
+}
+
+	input[type=text]:focus, input[type=password]:focus {
+		background-color: #ddd;
+		outline: none;
+	}
+
+/* Overwrite default styles of hr */
+hr {
+	border: 1px solid #f1f1f1;
+	margin-bottom: 25px;
+}
+
+/* Set a style for the submit button */
+.registerbtn {
+	background-color:var(--black-color);
+	color: white;
+	padding: 16px 20px;
+	margin: 8px 0;
+	border: none;
+	cursor: pointer;
+	width: 100%;
+	opacity: 0.9;
+}
+
+	.registerbtn:hover {
+		opacity: 1;
+	}
+
+/* Add a blue text color to links */
+a {
+	color: dodgerblue;
+}
+
+/* Set a grey background color and center the text of the "sign in" section */
+.signin {
+	background-color: #f1f1f1;
+	text-align: center;
+}
+
+.btn {
+	appearance: none;
+	-webkit-appearance: none;
+	font-family: sans-serif;
+	cursor: pointer;
+	padding: 12px;
+	min-width: 100px;
+	border: 0px;
+	-webkit-transition: background-color 100ms linear;
+	-ms-transition: background-color 100ms linear;
+	transition: background-color 100ms linear;
+}
+
+	.btn:focus,
+	.btn.focus {
+		outline: 0;
+	}
+
+.btn-round-1 {
+	border-radius: 8px;
+}
+
+.btn-round-2 {
+	border-radius: 20px;
+}
+
+.btn-dark {
+	background: #000;
+	color: #ffffff;
+}
+
+	.btn-dark:hover {
+		background: #212121;
+		color: #ffffff;
+	}
+
+.btn-light {
+	background: #ededed;
+	color: #000;
+}
+
+	.btn-light:hover {
+		background: #dbdbdb;
+		color: #000;
+	}
+
+.btn-primary {
+	background: #3498db;
+	color: #ffffff;
+}
+
+	.btn-primary:hover {
+		background: #2980b9;
+		color: #ffffff;
+	}
+
+.btn-success {
+	background: #2ecc71;
+	color: #ffffff;
+}
+
+	.btn-success:hover {
+		background: #27ae60;
+		color: #ffffff;
+	}
+
+.btn-warning {
+	background: #f1c40f;
+	color: #ffffff;
+}
+
+	.btn-warning:hover {
+		background: #f39c12;
+		color: #ffffff;
+	}
+
+.btn-danger {
+	background: #e74c3c;
+	color: #ffffff;
+}
+
+	.btn-danger:hover {
+		background: #c0392b;
+		color: #ffffff;
+	}
