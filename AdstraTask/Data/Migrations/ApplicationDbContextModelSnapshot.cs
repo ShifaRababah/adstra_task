@@ -178,9 +178,9 @@ namespace AdstraTask.Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "0596f773-4be2-4bdc-a8c0-ddf10dc2a320",
+                            Id = "5561a1c2-b8d2-425d-90ee-b3276709262b",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "8112b13a-dd15-4fc0-b2d9-41ac2c859912",
+                            ConcurrencyStamp = "d95ea725-8d5f-428d-89af-77438fb5ac48",
                             Email = "Admin@gmail.com",
                             EmailConfirmed = false,
                             LockoutEnabled = false,
@@ -189,15 +189,15 @@ namespace AdstraTask.Data.Migrations
                             PasswordHash = "Admin*123",
                             PhoneNumber = "12343545",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "225a1cff-68b9-4964-97f8-6b6a610c6687",
+                            SecurityStamp = "220e4ade-8929-44b1-87cd-c50aecb36171",
                             TwoFactorEnabled = false,
                             UserName = "Admin"
                         },
                         new
                         {
-                            Id = "17c53995-0047-471b-bf0b-ca1bd7fd0306",
+                            Id = "2a0665ca-42f6-42a2-b0f7-7f0c78c457d2",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "71878471-0777-4bfe-9dd8-3afb418a577d",
+                            ConcurrencyStamp = "57979154-39fd-4600-b722-a14e209a5275",
                             Email = "User@gmail.com",
                             EmailConfirmed = false,
                             LockoutEnabled = false,
@@ -206,7 +206,7 @@ namespace AdstraTask.Data.Migrations
                             PasswordHash = "User*123",
                             PhoneNumber = "43836287389",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "7090877b-3db7-4f9e-b9d8-7c95c87e890d",
+                            SecurityStamp = "1d5c72eb-6ec3-431c-bbe0-6373b731a4d6",
                             TwoFactorEnabled = false,
                             UserName = "User"
                         });
